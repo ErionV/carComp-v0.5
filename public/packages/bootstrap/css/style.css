@@ -1,0 +1,90 @@
+body{
+	background-color: #E6E3E3;
+	}
+
+.navbar-form .form-control {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100px;
+    -o-transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-form {
+    border: 0px none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: none;
+}
+
+.options_nav {
+    font-size: 25px;
+    color: #428bca;
+    border-color: #357ebd;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.options_nav a {
+    text-decoration: none;
+}
+
+.options_nav a:hover {
+    text-decoration: none;
+    color: #333;
+}
+
+.options_nav {
+    font-size: 25px;
+    color: #428bca;
+    border-color: #357ebd;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+
+.options_nav:hover {
+    text-decoration: none;
+    color: #3276b1;
+    border-color: #285e8e;
+}
+
+#search_bar {
+    width: 350px;
+}
+
+.login_nav {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.reg_nav {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.username_nav {
+    margin-top: 15px;
+}
+
+.popover {
+    width: 150px;
+    height: auto;
+}
+
+.logo {
+    font-size: 35px;
+}
+
+.formSeparatorR {
+    height: 500px;
+    border-right: 1px solid rgba(0, 0, 0, 0.50);
+}
+
+.formSeparatorL {
+    height: 500px;
+    border-left: 1px solid rgba(0, 0, 0, 0.50);
+}

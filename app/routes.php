@@ -87,6 +87,13 @@ Route::group(['before' => 'guest'], function()
             'uses'  => 'AccountController@postForgotPassword'
         ]);
 
+        /*
+         * Forgot password (POST)
+         */
+        Route::post('/dealer/register', [
+            'as'    => 'dealer_register_post',
+            'uses'  => 'DealerController@postDealerRegister'
+        ]);
 
     });
 
@@ -112,6 +119,14 @@ Route::group(['before' => 'guest'], function()
     Route::get('/account/activate/{code}', [
         'as'    => 'account_activate',
         'uses'  => 'AccountController@getActivate'
+    ]);
+
+    /*
+     * Activate user using code (GET)
+     */
+    Route::get('/dealer/activate/{code}', [
+        'as'    => 'dealer_activate',
+        'uses'  => 'DealerController@getActivate'
     ]);
 
     /*

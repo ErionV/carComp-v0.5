@@ -130,4 +130,19 @@ Route::group(['before' => 'guest'], function()
         'uses'  => 'AccountController@getRecoverPassword'
     ]);
 
+    /*
+    * Post new add (GET)
+    */
+    Route::get('/postad/', [
+        'as'    => 'advert_post_ad_get',
+        'uses'  => 'AdvertController@getPostAdvertGet'
+    ]);
+
+    /*
+     * Dealer Registration (GET)
+     */
+    Route::get('/dealer/register', [
+        'as'    => 'dealer_register',
+        'uses'  => 'DealerController@getDealerRegister'
+    ]);
 });

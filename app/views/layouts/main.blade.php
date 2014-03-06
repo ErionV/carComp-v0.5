@@ -14,7 +14,7 @@
     <div class="container">
 
         @if(Session::has('global'))
-            <div class="alert-warning alert">
+            <div id="notificationMessage" class="alert-warning alert">
                 <p>
                     <strong>NOTIFICATION!</strong>
                     {{ Session::get('global') }}

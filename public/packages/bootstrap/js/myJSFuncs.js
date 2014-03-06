@@ -7,4 +7,6 @@ $(document).ready(function(){
             return $('#popover-content').html();
         }
     });
+
+    $('#notificationMessage').delay(4000).fadeOut();
 });

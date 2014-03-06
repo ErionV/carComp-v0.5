@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h2>{{$user->username}}'s Profile</h2>
+    <div class="col-lg-10">
+        <h2>{{$user->username}}'s Profile</h2>
+    </div>
 @stop

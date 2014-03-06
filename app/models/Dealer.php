@@ -25,7 +25,7 @@ class Dealer extends Eloquent
         'contact_number'=> 'required|max:15|min:11|unique:dealers',
         'post_code'     => 'required|max:8|min:6',
         'about'         => 'max:255|min 20',
-        'website'       => 'max:100|min:5|unique:dealers',
+        'website'       => 'url|max:100|min:5|unique:dealers',
         'password'      => 'required|max:60|min:6',
         'password_again'=> 'required|max:60|min:6|same:password'
     ];

@@ -33,6 +33,14 @@ Route::group(['before' => 'auth'], function()
             'as'        => 'account_change_password_post',
             'uses'      => 'AccountController@postChangePassword'
         ]);
+
+        /*
+         * Post advert (POST)
+         */
+        Route::post('/postad/', [
+            'as'    => 'post_advert',
+            'uses'  => 'AdvertController@postAdvert'
+        ]);
     });
 
     /*
@@ -49,6 +57,14 @@ Route::group(['before' => 'auth'], function()
     Route::get('/account/changePassword', [
         'as'        => 'account_change_password',
         'uses'      => 'AccountController@getChangePassword'
+    ]);
+
+    /*
+    * Post new add (GET)
+    */
+    Route::get('/postad/', [
+        'as'    => 'advert_postad_get',
+        'uses'  => 'AdvertController@getPostAdvertGet'
     ]);
 });
 
@@ -95,13 +111,6 @@ Route::group(['before' => 'guest'], function()
             'uses'  => 'DealerController@postDealerRegister'
         ]);
 
-        /*
-         * Post advert (POST)
-         */
-        Route::post('/postad/', [
-            'as'    => 'post_advert',
-            'uses'  => 'AdvertController@postAdvert'
-        ]);
     });
 
     /*
@@ -152,13 +161,6 @@ Route::group(['before' => 'guest'], function()
         'uses'  => 'AccountController@getRecoverPassword'
     ]);
 
-    /*
-    * Post new add (GET)
-    */
-    Route::get('/postad/', [
-        'as'    => 'advert_post_ad_get',
-        'uses'  => 'AdvertController@getPostAdvertGet'
-    ]);
 
     /*
      * Dealer Registration (GET)

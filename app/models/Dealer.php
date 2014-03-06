@@ -4,7 +4,7 @@ class Dealer extends Eloquent
 {
     protected $guarded = array();
 
-    protected $fillable = array(
+    protected $fillable = [
         'email',
         'username',
         'company_name',
@@ -15,7 +15,7 @@ class Dealer extends Eloquent
         'password_temp',
         'code',
         'active'
-    );
+    ];
 
     public static $rulesRegisterForm = [
         'email'         => 'required|max:50|email|unique:users',
@@ -36,13 +36,6 @@ class Dealer extends Eloquent
      * @var string
      */
     protected $table = 'dealers';
-
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = array('password');
 
     /**
      * Get the unique identifier for the user.

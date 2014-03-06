@@ -29,7 +29,7 @@ class DealerController extends BaseController
             $dealer->company_name   = strtoupper(Input::get('company_name'));
             $dealer->company_number = Input::get('company_number');
             $dealer->contact_number = Input::get('contact_number');
-            $dealer->post_code      = strtoupper(Input::get('post_code'));
+            $dealer->post_code      = str_replace(' ', '', strtoupper(Input::get('post_code')));
             $dealer->about          = Input::get('about');
             $dealer->website        = Input::get('website');
 

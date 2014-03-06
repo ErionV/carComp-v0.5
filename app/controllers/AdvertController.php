@@ -7,7 +7,12 @@ class AdvertController extends BaseController
     */
     public function getPostAdvertGet()
     {
-        return View::make('advert.postAdvert');
+        return  View::make('advert.postAdvert');
+    }
+
+    public function postAdvert()
+    {
+
     }
 
 }

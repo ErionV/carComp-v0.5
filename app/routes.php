@@ -95,6 +95,13 @@ Route::group(['before' => 'guest'], function()
             'uses'  => 'DealerController@postDealerRegister'
         ]);
 
+        /*
+         * Post advert (POST)
+         */
+        Route::post('/postad/', [
+            'as'    => 'post_advert',
+            'uses'  => 'AdvertController@postAdvert'
+        ]);
     });
 
     /*

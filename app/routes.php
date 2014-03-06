@@ -17,6 +17,14 @@ Route::get('/user/{username}', [
 ]);
 
 /*
+     * View car advert with id (GET)
+     */
+Route::get('/ad/{id}', [
+    'as'    => 'view_advert_get',
+    'uses'  => 'AdvertController@getViewAdvert'
+]);
+
+/*
  * Authenticated group
  */
 Route::group(['before' => 'auth'], function()
@@ -160,7 +168,6 @@ Route::group(['before' => 'guest'], function()
         'as'    => 'account_recover_password',
         'uses'  => 'AccountController@getRecoverPassword'
     ]);
-
 
     /*
      * Dealer Registration (GET)

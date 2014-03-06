@@ -1,5 +1,7 @@
 {{ Form::open(['url' => URL::route('post_advert'), 'method' => 'POST', 'class'=>'form-signup', 'file' => true]) }}
 
+    {{ Form::text('number_plate', null, ['class'=>'form-control', 'placeholder'=>'Number plate']) }}
+    {{ $errors->first('number_plate') }}
 
     {{ Form::text('title', null, ['class'=>'form-control', 'placeholder'=>'Title']) }}
     {{ $errors->first('title') }}
@@ -40,6 +42,12 @@
 
     {{ Form::textarea('extras', null, ['class'=>'form-control', 'placeholder'=>'Vehicle Extras']) }}
     {{ $errors->first('extras') }}
+
+    {{ Form::text('plus_points', null, ['class'=>'form-control', 'placeholder'=>'Vehicle plus points']) }}
+    {{ $errors->first('plus_points') }}
+
+    {{ Form::text('negative_points', null, ['class'=>'form-control', 'placeholder'=>'Vehicle negative points']) }}
+    {{ $errors->first('negative_points') }}
 
     {{ Form::submit('Post ad!'); }}
 

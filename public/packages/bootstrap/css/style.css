@@ -88,3 +88,49 @@ body{
     height: 500px;
     border-left: 1px solid rgba(0, 0, 0, 0.50);
 }
+
+/*removes stupid dotted line around the link*/
+a,a:hover,a:focus,a:active{
+    outline: 0;
+}
+
+.descriptionWell,.pointsWell{
+    margin-top: 20px;
+}
+
+.productNameAndPrice{
+    background-color: #232323;
+}
+
+.panel-body h3{
+    padding: 0;
+    margin: 0;
+    color: #EAEAEA;
+}
+
+.productNameAndPrice h3 span{
+    color: #787878;
+}
+
+.pointsWell .glyphicon-plus{
+    color: #16CC02;
+}
+
+.pointsWell .glyphicon-minus{
+    color: #F33;
+}
+
+.pointsWell h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.interactionInfo p{
+    padding: 5px;
+    color: #C0C0C0;
+}
+
+.productDetails h5{
+    font-size: 17px;
+    font-weight: bold;
+}

@@ -27,28 +27,38 @@ class AdvertController extends BaseController
         }
         else
         {
+            //Create new advert
             $advert = new Advert;
             $advert->customer_id    = Auth::user()->id;
-            $advert->number_plate   = strtoupper(Input::get('number_plate'));
+          //  $advert->number_plate   = strtoupper(Input::get('number_plate'));
             $advert->title          = Input::get('title');
             $advert->price          = Input::get('price');
-//            $advert->make           = Input::get('make');
-//            $advert->model          = Input::get('model');
+            $advert->make           = Input::get('make');
+            $advert->model          = Input::get('model');
             $advert->gearbox        = Input::get('gearbox');
             $advert->fuel_type      = Input::get('fuel_type');
             $advert->mileage         = Input::get('mileage');
             $advert->colour         = Input::get('colour');
             $advert->description    = Input::get('description');
-            $advert->extras         = Input::get('extras');
-            $advert->plus_points    = Input::get('plus_points');
-            $advert->negative_points= Input::get('negative_points');
+
+            $image = new CarPics;
 
             if(Input::hasFile('image'))
             {
                 $file               = Input::file('image');
 
-                $file->move(public_path().'/images/', time().str_random(10));
+                $name               = time() . '-' . str_random(10);
+
+                $file               = $file->move(public_path().'/images/', $name);
+
+                $image->image_1     = $name;
+
+                //Save the image to DB
+                $image->save();
             }
+
+            //Add the images table id to the adverts row to link the advert to its images
+            $advert->images_id       = $image->id;
 
             if($advert->save())
             {
@@ -65,11 +75,13 @@ class AdvertController extends BaseController
     public function getViewAdvert($id)
     {
         $advert = Advert::find($id);
+        $images = CarPics::find($advert->images_id);
 
         if($advert)
         {
             return  View::make('advert.viewAdvert')
-                    ->with('advert', $advert);
+                    ->with('advert', $advert)
+                    ->with('images', $images);
         }
     }
 

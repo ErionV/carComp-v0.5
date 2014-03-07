@@ -134,3 +134,10 @@ a,a:hover,a:focus,a:active{
     font-size: 17px;
     font-weight: bold;
 }
+
+textarea.form-control{
+    max-height: 150px;
+    max-width: 100%;
+    resize: none;
+
+}

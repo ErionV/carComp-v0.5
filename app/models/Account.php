@@ -2,7 +2,7 @@
 
 class Account extends Eloquent
 {
-	protected $guarded = array();
+	protected $guarded = ['email', 'password'];
 
 	public static $rulesRegisterForm = [
         'email'         => 'required|max:50|email|unique:users',

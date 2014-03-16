@@ -67,7 +67,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            {{ Form::submit('Post ad!',['class' => 'btn btn-primary pull-right']); }}
+            {{ Form::submit('Post Ad !',['class' => 'btn btn-primary pull-right']); }}
         </div>
     </div>
 

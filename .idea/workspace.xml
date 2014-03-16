@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="981ede56-714e-45b1-b855-c5b9676ee56f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_03_06_175135_create_advert_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_03_06_175135_create_advert_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Account.php" afterPath="$PROJECT_DIR$/app/models/Account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Advert.php" afterPath="$PROJECT_DIR$/app/models/Advert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/AdvertController.php" afterPath="$PROJECT_DIR$/app/controllers/AdvertController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/UsersTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/mail.php" afterPath="$PROJECT_DIR$/app/config/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/main.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/main.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/navigation.blade.php" afterPath="$PROJECT_DIR$/app/views/layouts/navigation.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/advert/postAdvert.blade.php" afterPath="$PROJECT_DIR$/app/views/advert/postAdvert.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/advert/forms/postAdvertForm.blade.php" afterPath="$PROJECT_DIR$/app/views/advert/forms/postAdvertForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/packages/bootstrap/css/style.css" afterPath="$PROJECT_DIR$/public/packages/bootstrap/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/advert/viewAdvert.blade.php" afterPath="$PROJECT_DIR$/app/views/advert/viewAdvert.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="carComp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +37,7 @@
       <file leaf-file-name="postAdvertForm.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/advert/forms/postAdvertForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="78" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.8867925" vertical-offset="330" max-vertical-offset="1200">
+            <state line="67" column="21" selection-start="3434" selection-end="3434" vertical-scroll-proportion="0.8679245" vertical-offset="315" max-vertical-offset="1200">
               <folding />
             </state>
           </provider>
@@ -895,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/advert/forms/postAdvertForm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="78" selection-start="3545" selection-end="3545" vertical-scroll-proportion="0.8867925" vertical-offset="330" max-vertical-offset="1200">
+        <state line="67" column="21" selection-start="3434" selection-end="3434" vertical-scroll-proportion="0.8679245" vertical-offset="315" max-vertical-offset="1200">
           <folding />
         </state>
       </provider>

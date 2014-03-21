@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="981ede56-714e-45b1-b855-c5b9676ee56f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/1394210273-bcuXElQo3N" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/1395011812-VZ3yB7mjt2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/1395109058-hiynnXh2FK" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/lambo-front.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/lambo-rear.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/lambo-side.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/lambo34.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/.gitignore" afterPath="$PROJECT_DIR$/app/storage/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/cache/.gitignore" afterPath="$PROJECT_DIR$/app/storage/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/logs/.gitignore" afterPath="$PROJECT_DIR$/app/storage/logs/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/meta/.gitignore" afterPath="$PROJECT_DIR$/app/storage/meta/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/sessions/.gitignore" afterPath="$PROJECT_DIR$/app/storage/sessions/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/storage/views/.gitignore" afterPath="$PROJECT_DIR$/app/storage/views/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="981ede56-714e-45b1-b855-c5b9676ee56f" name="Default" comment="" />
     <ignored path="carComp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +26,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="10" selection-start="615" selection-end="615" vertical-scroll-proportion="-0.23474178" vertical-offset="840" max-vertical-offset="2760">
+            <state line="158" column="40" selection-start="3475" selection-end="3499" vertical-scroll-proportion="0.7276995" vertical-offset="1440" max-vertical-offset="2760">
               <folding />
             </state>
           </provider>
@@ -223,46 +207,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="advert" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carComp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carComp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carComp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="carComp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,7 +569,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="10" selection-start="615" selection-end="615" vertical-scroll-proportion="-0.23474178" vertical-offset="840" max-vertical-offset="2760">
+        <state line="158" column="40" selection-start="3475" selection-end="3499" vertical-scroll-proportion="0.7276995" vertical-offset="1440" max-vertical-offset="2760">
           <folding />
         </state>
       </provider>

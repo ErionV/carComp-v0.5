@@ -37,7 +37,7 @@ class AdvertController extends BaseController
             $advert->model          = Input::get('model');
             $advert->gearbox        = Input::get('gearbox');
             $advert->fuel_type      = Input::get('fuel_type');
-            $advert->mileage         = Input::get('mileage');
+            $advert->mileage        = Input::get('mileage');
             $advert->colour         = Input::get('colour');
             $advert->description    = Input::get('description');
 

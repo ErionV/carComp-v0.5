@@ -55,7 +55,7 @@
     </div><!--End row-->
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9">
             <div class="well descriptionWell">
                 <h4>Description:</h4>
                 <p>

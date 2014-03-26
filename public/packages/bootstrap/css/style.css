@@ -141,3 +141,32 @@ textarea.form-control{
     resize: none;
 
 }
+
+.navbar1{
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar2{
+    border-radius: 0;
+    border: 0;
+}
+
+.lamboTemp img{
+    width: 100%;
+}
+
+.caption_onLambo{
+    position: absolute;
+    top: 0px;
+    right: 100px;
+}
+
+.caption_onLambo h4{
+    height: auto;
+    width: 100%;
+    text-align: right;
+    color: #FFF;
+    z-index: 200;
+
+}

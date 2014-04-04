@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	"username" => "laravel4carcomp@gmail.com",
+	"username" => "g@gmail.com",
 
 	/*
 	|--------------------------------------------------------------------------

@@ -14,11 +14,11 @@ class CreateUsersTable extends Migration {
 	{
 		Schema::create('users', function(Blueprint $table) {
 			$table->increments('id');
-            $table->integer('dealer_id');
+            $table->integer('dealer_id')->default(0);
 			$table->string('email', 50)->unique();
 			$table->string('username', 20)->unique();
 			$table->string('password', 60);
-			$table->string('password_temp', 60);
+			$table->string('password_temp', 60)->default('');
 			$table->string('code', 30);
 			$table->boolean('active', 11)->default(0);
 			$table->timestamps();

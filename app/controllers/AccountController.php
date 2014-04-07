@@ -196,9 +196,11 @@ class AccountController extends BaseController {
             }
         }
 
-        //Redirect home with message
-        return  Redirect::route('home')
-                ->with('global', 'Activation of your account was unsuccessful or has expired :(');
+        dd($user);
+
+//        //Redirect home with message
+//        return  Redirect::route('home')
+//                ->with('global', 'Activation of your account was unsuccessful or has expired :(');
     }
 
     /*

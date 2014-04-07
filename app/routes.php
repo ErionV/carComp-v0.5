@@ -146,7 +146,7 @@ Route::group(['before' => 'guest'], function()
     ]);
 
     /*
-     * Activate user using code (GET)
+     * Activate dealer using code (GET)
      */
     Route::get('/dealer/activate/{code}', [
         'as'    => 'dealer_activate',

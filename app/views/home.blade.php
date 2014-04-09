@@ -7,59 +7,48 @@
                     <div class="col-md-6 form-group">
                        <input type="" class="form-control" placeholder="Postcode">
                     </div>
+
                     <div class="col-md-6 form-group">
                         <select class="form-control">
-                            <option>Distance</option>
+                            <option>Distance (Miles)</option>
+                            <option>1</option>
                             <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
                             <option>5</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>30</option>
+                            <option>50</option>
+                            <option>70</option>
+                            <option>100</option>
+                            <option>150</option>
+                            <option>200</option>
+                            <option>National</option>
                         </select>
                     </div>
+
+                    <div class="col-md-12 form-group">
+                        {{ Form::select('car_make', $car_make_list, Input::old('car_make'), ['class' => 'form-control']) }}
+                    </div>
+
                 </div>
+
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <select class="form-control">
-                            <option>Make</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        {{ Form::select('car_model', $car_model_list, Input::old('car_model'), ['class' => 'form-control']) }}
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12 form-group">
-                        <select class="form-control">
-                            <option>Model</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <select class="form-control">
-                            <option>Min Price</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        {{ Form::text('minPrice', null, ['class' => 'form-control', 'placeholder' => 'Min Price (£)']) }}
                     </div>
                     <div class="col-md-6 form-group">
-                        <select class="form-control">
-                            <option>Max Price</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
+                        {{ Form::text('maxPrice', null, ['class' => 'form-control', 'placeholder' => 'Max Price (£)']) }}
                     </div>
                 </div>
+
                 <button type="submit" class="btn btn-lg btn-primary form-group col-md-12">Search</button>
+
             </div>
             <div class="col-md-8 lamboTemp">
                 <img src="http://4.bp.blogspot.com/-_ceG8hWuOZQ/TyYtLKLvVFI/AAAAAAAAB9k/LP7wBDzkccc/s1600/lamborghini-aventador+6.jpg">

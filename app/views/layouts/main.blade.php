@@ -28,6 +28,7 @@
         {{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') }}
         {{ HTML::script('packages/bootstrap/js/bootstrap.min.js') }}
         {{ HTML::script('packages/bootstrap/js/myJSFuncs.js') }}
+        {{ HTML::script('packages/bootstrap/js/angular.js') }}
     </div>
 
 </body>

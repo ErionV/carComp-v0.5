@@ -11,9 +11,9 @@
         </div><!--End col-md-9-->
 
         <div class="col-md-3">
-            <div class="panel productNameAndPrice">
-                <div class="panel-body">
-                    <h3 class="text-center">£{{$advert->price}}</h3>
+            <div class="panel productNameAndPrice" ng-app="myApp">
+                <div class="panel-body" ng-app="myController">
+                    <h3 class="text-center">£{{ $advert->price }}</h3>
                 </div>
             </div><!--End productNameAndPrice-->
         </div><!--End col-md-3-->

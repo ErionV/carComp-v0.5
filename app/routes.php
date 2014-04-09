@@ -176,4 +176,5 @@ Route::group(['before' => 'guest'], function()
         'as'    => 'dealer_register',
         'uses'  => 'DealerController@getDealerRegister'
     ]);
+
 });

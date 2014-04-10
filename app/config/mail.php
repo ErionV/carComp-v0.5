@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => ['address' => 'laravel4carcomp@gmail.com', 'name' => 'carComp'],
+	'from' => ['address' => 'larav@gmail.com', 'name' => 'carComp'],
 
 	/*
 	|--------------------------------------------------------------------------

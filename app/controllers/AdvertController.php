@@ -47,7 +47,7 @@ class AdvertController extends BaseController
             {
                 $file               = Input::file('image');
 
-                $name               = time() . '-' . str_random(10);
+                $name               = time() . '-' . str_random(10) . '.jpeg';
 
                 $file               = $file->move(public_path().'/images/', $name);
 

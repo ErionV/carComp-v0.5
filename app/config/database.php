@@ -55,7 +55,6 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'port'      => 8888,
             'database'  => 'carComp',
             'username'  => 'root',
             'password'  => 'erion1991',

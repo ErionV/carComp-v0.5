@@ -57,7 +57,7 @@ return array(
             'host'      => 'localhost',
             'database'  => 'carComp',
             'username'  => 'root',
-            'password'  => 'erion1991',
+            'password'  => 'Erion1991',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

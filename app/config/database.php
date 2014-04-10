@@ -74,7 +74,7 @@ return array(
 //			'collation' => 'utf8_unicode_ci',
 //			'prefix'    => '',
 //		),
-//        //Mac database Settings
+//        //Macbook Air database Settings
 //        'mysql' => array(
 //            'driver'    => 'mysql',
 //            'host'      => '127.0.0.1',

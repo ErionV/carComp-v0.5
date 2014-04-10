@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => ['address' => 'larav@gmail.com', 'name' => 'carComp'],
+	'from' => ['address' => 'erion.vlada@gmail.com', 'name' => 'carComp'],
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	"username" => "g@gmail.com",
+	"username" => "erion.vlada@gmail.com",
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => 'laravel4',
+	'password' => 'pleaseChangeOnServer',
 
 	/*
 	|--------------------------------------------------------------------------

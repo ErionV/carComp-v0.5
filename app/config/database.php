@@ -51,18 +51,29 @@ return array(
 			'database' => __DIR__.'/../database/production.sqlite',
 			'prefix'   => '',
 		),
-        //iMac database Settings
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => '127.0.0.1',
-            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
-			'database'  => 'carComp',
-			'username'  => 'root',
-			'password'  => 'root',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		),
+        //Live Server database Settings
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => '127.0.0.1',
+            'database'  => 'carComp',
+            'username'  => 'root',
+            'password'  => 'erion1991',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ),
+//        //iMac database Settings
+//		'mysql' => array(
+//			'driver'    => 'mysql',
+//			'host'      => '127.0.0.1',
+//            'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
+//			'database'  => 'carComp',
+//			'username'  => 'root',
+//			'password'  => 'root',
+//			'charset'   => 'utf8',
+//			'collation' => 'utf8_unicode_ci',
+//			'prefix'    => '',
+//		),
 //        //Mac database Settings
 //        'mysql' => array(
 //            'driver'    => 'mysql',

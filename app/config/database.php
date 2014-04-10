@@ -54,7 +54,7 @@ return array(
         //Live Server database Settings
         'mysql' => array(
             'driver'    => 'mysql',
-            'host'      => '127.0.0.1',
+            'host'      => 'localhost',
             'database'  => 'carComp',
             'username'  => 'root',
             'password'  => 'erion1991',

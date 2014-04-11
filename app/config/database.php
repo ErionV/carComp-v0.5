@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
 
 	'fetch' => PDO::FETCH_CLASS,
 
@@ -8,10 +8,10 @@ return array(
 	'default' => 'mysql',
 
 
-	'connections' => array(
+	'connections' => [
 
         //Live Server database Settings
-        'mysql' => array(
+        'mysql' => [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'database'  => 'carComp',
@@ -20,21 +20,21 @@ return array(
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-        ),
-	),
+        ]
+	],
 
 	'migrations' => 'migrations',
 
-	'redis' => array(
+	'redis' => [
 
 		'cluster' => false,
 
-		'default' => array(
+		'default' => [
 			'host'     => '127.0.0.1',
 			'port'     => 6379,
-			'database' => 0,
-		),
+			'database' => 0
+		]
 
-	),
+	]
 
-);
+];

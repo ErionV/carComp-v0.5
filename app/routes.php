@@ -134,7 +134,7 @@ Route::group(['before' => 'guest'], function()
      */
     Route::get('/account/register', [
         'as'    => 'account_register',
-        'uses'  => 'AccountController@getregister'
+        'uses'  => 'AccountController@getRegister'
     ]);
 
     /*

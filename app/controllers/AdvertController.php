@@ -45,20 +45,29 @@ class AdvertController extends BaseController
 
             if(Input::hasFile('image'))
             {
+                //Get image
                 $file               = Input::file('image');
 
+                //Genarate new name
                 $name               = time() . '-' . str_random(10) . '.jpeg';
 
+                //Move the image to image folder with in public directory
                 $file               = $file->move(public_path().'/images/', $name);
 
-                $image->image     = $name;
+                //Insert the new name within car_ad_images, under image column
+                $image->image       = $name;
+
+            }
+
+            //If the advert data saves correctly, then use the new adverts
+            //id and store it under the advert_id column
+            if($advert->save())
+            {
+                $image->advert_id   = $advert->id;
 
                 //Save the image to DB
                 $image->save();
-            }
 
-            if($advert->save())
-            {
                 return  Redirect::route('home')
                         ->with('global', 'Success, car is now online :)');
             }
@@ -72,7 +81,7 @@ class AdvertController extends BaseController
     public function getViewAdvert($id)
     {
         $advert = Advert::find($id);
-        $images = CarPics::find($advert->images_id);
+        $images = CarPics::whereAdvert_id($advert->id)->first();
 
         if($advert)
         {

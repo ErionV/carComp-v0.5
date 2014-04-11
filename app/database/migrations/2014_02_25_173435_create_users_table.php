@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration {
 			$table->string('password_temp', 60)->default('');
 			$table->string('code', 30);
 			$table->boolean('active', 11)->default(0);
-			$table->timestamps()->now();
+			$table->timestamps();
 		});
 	}
 

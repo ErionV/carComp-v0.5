@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="981ede56-714e-45b1-b855-c5b9676ee56f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/local/database.php" afterPath="$PROJECT_DIR$/app/config/local/database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/start.php" afterPath="$PROJECT_DIR$/bootstrap/start.php" />
     </list>
     <ignored path="carComp.iws" />
@@ -44,19 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="start.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="start.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="49" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1035">
+            <state line="31" column="0" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.25821596" vertical-offset="0" max-vertical-offset="1278">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="22" selection-start="39" selection-end="39" vertical-scroll-proportion="0.04694836" vertical-offset="0" max-vertical-offset="1278">
+            <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -98,8 +97,8 @@
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_02_25_173435_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
-        <option value="$PROJECT_DIR$/bootstrap/start.php" />
         <option value="$PROJECT_DIR$/app/config/local/database.php" />
+        <option value="$PROJECT_DIR$/bootstrap/start.php" />
       </list>
     </option>
   </component>
@@ -815,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="49" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_06_002321_create_dealers_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1279">
@@ -838,7 +830,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="39" selection-end="39" vertical-scroll-proportion="0.04694836" vertical-offset="0" max-vertical-offset="1278">
+        <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.25821596" vertical-offset="0" max-vertical-offset="1278">
           <folding />
         </state>
       </provider>

@@ -27,7 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment([
 
     'production'    => ['carComp', 'http://188.226.220.11', '188.226.220.11'],
-	'local'         => ['erions-imac', 'localhost']
+	'local'         => ['erions-imac']
 ]);
 
 /*

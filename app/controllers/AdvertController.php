@@ -51,14 +51,11 @@ class AdvertController extends BaseController
 
                 $file               = $file->move(public_path().'/images/', $name);
 
-                $image->image_1     = $name;
+                $image->image     = $name;
 
                 //Save the image to DB
                 $image->save();
             }
-
-            //Add the images table id to the adverts row to link the advert to its images
-            $advert->images_id       = $image->id;
 
             if($advert->save())
             {

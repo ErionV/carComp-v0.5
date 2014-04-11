@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <img class="img-responsive img-thumbnail" src="/images/{{$images->image_1}}">
+            <img class="img-responsive img-thumbnail" src="/images/{{$images->image}}">
         </div>
 
         <div class="col-md-3">

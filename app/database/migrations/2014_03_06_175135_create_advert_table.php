@@ -14,8 +14,8 @@ class CreateAdvertTable extends Migration {
 	{
 		Schema::create('advert', function(Blueprint $table) {
 			$table->increments('id');
+            $table->integer('car_id')->references('id')->on('cars_all')->default(0);
 			$table->integer('customer_id')->references('id')->on('users')->default(0);
-            $table->integer('images_id')->references('id')->on('car_ad_images')->default(0);
 			$table->string('number_plate', 7);
             $table->string('make', 20);
             $table->string('model', 50);

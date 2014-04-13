@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->string('username', 20)->unique();
 			$table->string('password', 60);
 			$table->string('password_temp', 60)->default('');
-			$table->string('code', 30);
+			$table->string('code', 30)->default('');
 			$table->boolean('active', 11)->default(0);
 			$table->timestamps();
 		});

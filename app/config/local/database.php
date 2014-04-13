@@ -4,11 +4,11 @@ return [
 
     'connections' => [
         'mysql' => [
-            'host'      => '127.0.0.1',
+            'host'      => $_ENV['host'],
             'unix_socket'   => '/Applications/MAMP/tmp/mysql/mysql.sock',
-            'database'  => 'carComp',
-            'username'  => 'root',
-            'password'  => 'root',
+            'database'  => $_ENV['database'],
+            'username'  => $_ENV['username'],
+            'password'  => $_ENV['password'],
         ]
     ]
 ];

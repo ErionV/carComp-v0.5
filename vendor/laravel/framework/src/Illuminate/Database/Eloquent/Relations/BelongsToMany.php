@@ -239,49 +239,13 @@ class BelongsToMany extends Relation {
 	 * Add the constraints for a relationship count query.
 	 *
 	 * @param  \Illuminate\Database\Eloquent\Builder  $query
-	 * @param  \Illuminate\Database\Eloquent\Builder  $parent
 	 * @return \Illuminate\Database\Eloquent\Builder
 	 */
-	public function getRelationCountQuery(Builder $query, Builder $parent)
+	public function getRelationCountQuery(Builder $query)
 	{
-		if ($parent->getQuery()->from == $query->getQuery()->from)
-		{
-			return $this->getRelationCountQueryForSelfJoin($query, $parent);
-		}
-		else
-		{
-			$this->setJoin($query);
+		$this->setJoin($query);
 
-			return parent::getRelationCountQuery($query, $parent);
-		}
-	}
-
-	/**
-	 * Add the constraints for a relationship count query on the same table.
-	 *
-	 * @param  \Illuminate\Database\Eloquent\Builder  $query
-	 * @param  \Illuminate\Database\Eloquent\Builder  $parent
-	 * @return \Illuminate\Database\Eloquent\Builder
-	 */
-	public function getRelationCountQueryForSelfJoin(Builder $query, Builder $parent)
-	{
-		$query->select(new \Illuminate\Database\Query\Expression('count(*)'));
-
-		$query->from($this->table.' as '.$hash = $this->getRelationCountHash());
-
-		$key = $this->wrap($this->getQualifiedParentKeyName());
-
-		return $query->where($hash.'.'.$this->foreignKey, '=', new \Illuminate\Database\Query\Expression($key));
-	}
-
-	/**
-	 * Get a relationship join table hash.
-	 *
-	 * @return string
-	 */
-	public function getRelationCountHash()
-	{
-		return 'self_'.md5(microtime(true));
+		return parent::getRelationCountQuery($query);
 	}
 
 	/**
@@ -843,7 +807,7 @@ class BelongsToMany extends Relation {
 	 */
 	protected function guessInverseRelation()
 	{
-		return camel_case(str_plural(class_basename($this->getParent())));
+		return strtolower(str_plural(class_basename($this->getParent())));
 	}
 
 	/**
@@ -888,7 +852,7 @@ class BelongsToMany extends Relation {
 	 *
 	 * @param  array  $attributes
 	 * @param  bool   $exists
-	 * @return \Illuminate\Database\Eloquent\Relations\Pivot
+	 * @return \Illuminate\Database\Eloquent\Relation\Pivot
 	 */
 	public function newPivot(array $attributes = array(), $exists = false)
 	{
@@ -928,9 +892,9 @@ class BelongsToMany extends Relation {
 	 *
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
 	 */
-	public function withTimestamps($createdAt = null, $updatedAt = null)
+	public function withTimestamps()
 	{
-		return $this->withPivot($createdAt ?: $this->createdAt(), $updatedAt ?: $this->updatedAt());
+		return $this->withPivot($this->createdAt(), $this->updatedAt());
 	}
 
 	/**
@@ -991,16 +955,6 @@ class BelongsToMany extends Relation {
 	public function getTable()
 	{
 		return $this->table;
-	}
-
-	/**
-	 * Get the relationship name for the relationship.
-	 *
-	 * @return string
-	 */
-	public function getRelationName()
-	{
-		return $this->relationName;
 	}
 
 }

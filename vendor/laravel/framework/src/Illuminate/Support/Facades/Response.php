@@ -2,6 +2,7 @@
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response as IlluminateResponse;
+use Illuminate\Support\Contracts\JsonableInterface;
 use Illuminate\Support\Contracts\ArrayableInterface;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -65,7 +66,7 @@ class Response {
 	/**
 	 * Return a new streamed response from the application.
 	 *
-	 * @param  \Closure  $callback
+	 * @param  Closure  $callback
 	 * @param  int      $status
 	 * @param  array    $headers
 	 * @return \Symfony\Component\HttpFoundation\StreamedResponse
@@ -78,7 +79,7 @@ class Response {
 	/**
 	 * Create a new file download response.
 	 *
-	 * @param  \SplFileInfo|string  $file
+	 * @param  SplFileInfo|string  $file
 	 * @param  string  $name
 	 * @param  array   $headers
 	 * @return \Symfony\Component\HttpFoundation\BinaryFileResponse

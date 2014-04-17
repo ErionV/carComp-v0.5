@@ -34,8 +34,8 @@ class Builder {
 	 * @var array
 	 */
 	protected $passthru = array(
-		'toSql', 'lists', 'insert', 'insertGetId', 'pluck', 'count',
-		'min', 'max', 'avg', 'sum', 'exists', 'getBindings',
+		'toSql', 'lists', 'insert', 'insertGetId', 'pluck',
+		'count', 'min', 'max', 'avg', 'sum', 'exists',
 	);
 
 	/**
@@ -95,7 +95,7 @@ class Builder {
 	{
 		if ( ! is_null($model = $this->find($id, $columns))) return $model;
 
-		throw with(new ModelNotFoundException)->setModel(get_class($this->model));
+		throw new ModelNotFoundException;
 	}
 
 	/**
@@ -121,7 +121,7 @@ class Builder {
 	{
 		if ( ! is_null($model = $this->first($columns))) return $model;
 
-		throw with(new ModelNotFoundException)->setModel(get_class($this->model));
+		throw new ModelNotFoundException;
 	}
 
 	/**
@@ -427,7 +427,7 @@ class Builder {
 	 */
 	protected function isSoftDeleteConstraint(array $where, $column)
 	{
-		return $where['type'] == 'Null' && $where['column'] == $column;
+		return $where['column'] == $column && $where['type'] == 'Null';
 	}
 
 	/**
@@ -581,46 +581,6 @@ class Builder {
 	}
 
 	/**
-	 * Add a basic where clause to the query.
-	 *
-	 * @param  string  $column
-	 * @param  string  $operator
-	 * @param  mixed   $value
-	 * @param  string  $boolean
-	 * @return \Illuminate\Database\Eloquent\Builder|static
-	 */
-	public function where($column, $operator = null, $value = null, $boolean = 'and')
-	{
-		if ($column instanceof Closure)
-		{
-			$query = $this->model->newQuery(false);
-
-			call_user_func($column, $query);
-
-			$this->query->addNestedWhereQuery($query->getQuery(), $boolean);
-		}
-		else
-		{
-			$this->query->where($column, $operator, $value, $boolean);
-		}
-
-		return $this;
-	}
-
-	/**
-	 * Add an "or where" clause to the query.
-	 *
-	 * @param  string  $column
-	 * @param  string  $operator
-	 * @param  mixed   $value
-	 * @return \Illuminate\Database\Eloquent\Builder|static
-	 */
-	public function orWhere($column, $operator = null, $value = null)
-	{
-		return $this->where($column, $operator, $value, 'or');
-	}
-
-	/**
 	 * Add a relationship count condition to the query.
 	 *
 	 * @param  string  $relation
@@ -634,7 +594,7 @@ class Builder {
 	{
 		$relation = $this->getHasRelationQuery($relation);
 
-		$query = $relation->getRelationCountQuery($relation->getRelated()->newQuery(), $this);
+		$query = $relation->getRelationCountQuery($relation->getRelated()->newQuery());
 
 		if ($callback) call_user_func($callback, $query);
 

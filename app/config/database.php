@@ -13,10 +13,18 @@ return [
         //Live Server database Settings
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => $_ENV['host'],
-            'database'  => $_ENV['database'],
-            'username'  => $_ENV['username'],
-            'password'  => $_ENV['password'],
+            // Environment variable only work in laravel 4.0
+//            'host'      => $_ENV['host'],
+//            'database'  => $_ENV['database'],
+//            'username'  => $_ENV['username'],
+//            'password'  => $_ENV['password'],
+
+            //Live server settings
+            'host'      => 'localhost',
+            'database'  => 'carComp',
+            'username'  => 'root',
+            'password'  => 'ErionV',
+
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',

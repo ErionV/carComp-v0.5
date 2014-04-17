@@ -64,7 +64,7 @@ class Connection implements ConnectionInterface {
 	 * @param  string  $username
 	 * @param  array   $auth
 	 * @param  \Illuminate\Remote\GatewayInterface
-	 * @param
+	 * @param  
 	 */
 	public function __construct($name, $host, $username, array $auth, GatewayInterface $gateway = null)
 	{
@@ -128,29 +128,6 @@ class Connection implements ConnectionInterface {
 
 			call_user_func($callback, $line, $this);
 		}
-	}
-
-	/**
-	 * Download the contents of a remote file.
-	 *
-	 * @param  string  $remote
-	 * @param  string  $local
-	 * @return void
-	 */
-	public function get($remote, $local)
-	{
-		$this->getGateway()->get($remote, $local);
-	}
-
-	/**
-	 * Get the contents of a remote file.
-	 *
-	 * @param  string  $remote
-	 * @return string
-	 */
-	public function getString($remote)
-	{
-		return $this->getGateway()->getString($remote);
 	}
 
 	/**
@@ -237,10 +214,7 @@ class Connection implements ConnectionInterface {
 	{
 		if ( ! $this->gateway->connected())
 		{
-			if ( ! $this->gateway->connect($this->username))
-			{
-				throw new \RuntimeException("Unable to connect to remote server.");
-			}
+			$this->gateway->connect($this->username);
 		}
 
 		return $this->gateway;

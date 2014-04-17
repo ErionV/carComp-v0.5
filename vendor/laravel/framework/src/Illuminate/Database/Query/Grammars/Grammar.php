@@ -410,6 +410,8 @@ class Grammar extends BaseGrammar {
 	 */
 	protected function compileHavings(Builder $query, $havings)
 	{
+		$me = $this;
+
 		$sql = implode(' ', array_map(array($this, 'compileHaving'), $havings));
 
 		return 'having '.preg_replace('/and /', '', $sql, 1);

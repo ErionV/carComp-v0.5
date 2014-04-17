@@ -151,17 +151,6 @@ class FormBuilder {
 	}
 
 	/**
-	 * Set the model instance on the form builder.
-	 *
-	 * @param  mixed  $model
-	 * @return void
-	 */
-	public function setModel($model)
-	{
-		$this->model = $model;
-	}
-
-	/**
 	 * Close the current form.
 	 *
 	 * @return string
@@ -410,7 +399,7 @@ class FormBuilder {
 
 		$options['id'] = $this->getIdAttribute($name, $options);
 
-		if ( ! isset($options['name'])) $options['name'] = $name;
+		$options['name'] = $name;
 
 		// We will simply loop through the options and build an HTML value for each of
 		// them until we have an array of HTML declarations. Then we will join them
@@ -612,7 +601,7 @@ class FormBuilder {
 	 * @param  string  $name
 	 * @param  mixed   $value
 	 * @param  bool    $checked
-	 * @return bool
+	 * @return void
 	 */
 	protected function getCheckedState($type, $name, $value, $checked)
 	{

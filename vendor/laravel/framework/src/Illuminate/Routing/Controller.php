@@ -34,9 +34,9 @@ abstract class Controller {
 	protected $layout;
 
 	/**
-	 * Register a "before" filter on the controller.
+	 * Register a "before" filter on the controler.
 	 *
-	 * @param  \Closure|string  $filter
+	 * @param  \Closure|string  $name
 	 * @param  array  $options
 	 * @return void
 	 */
@@ -46,9 +46,9 @@ abstract class Controller {
 	}
 
 	/**
-	 * Register an "after" filter on the controller.
+	 * Register an "after" filter on the controler.
 	 *
-	 * @param  \Closure|string  $filter
+	 * @param  \Closure|string  $name
 	 * @param  array  $options
 	 * @return void
 	 */
@@ -60,15 +60,13 @@ abstract class Controller {
 	/**
 	 * Parse the given filter and options.
 	 *
-	 * @param  \Closure|string  $filter
+	 * @param  \Closure|string  $name
 	 * @param  array  $options
 	 * @return array
 	 */
 	protected function parseFilter($filter, array $options)
 	{
 		$parameters = array();
-
-		$original = $filter;
 
 		if ($filter instanceof Closure)
 		{
@@ -83,7 +81,7 @@ abstract class Controller {
 			list($filter, $parameters) = Route::parseFilter($filter);
 		}
 
-		return compact('original', 'filter', 'parameters', 'options');
+		return compact('filter', 'parameters', 'options');
 	}
 
 	/**
@@ -196,7 +194,7 @@ abstract class Controller {
 		// If no response is returned from the controller action and a layout is being
 		// used we will assume we want to just return the layout view as any nested
 		// views were probably bound on this view during this controller actions.
-		if (is_null($response) && ! is_null($this->layout))
+		if (is_null($response) and ! is_null($this->layout))
 		{
 			$response = $this->layout;
 		}
@@ -207,14 +205,15 @@ abstract class Controller {
 	/**
 	 * Handle calls to missing methods on the controller.
 	 *
+	 * @param  string  $method
 	 * @param  array   $parameters
 	 * @return mixed
 	 *
 	 * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
 	 */
-	public function missingMethod($parameters = array())
+	public function missingMethod($method, $parameters = array())
 	{
-		throw new NotFoundHttpException("Controller method not found.");
+		throw new NotFoundHttpException("Controller method [{$method}] not found.");
 	}
 
 	/**
@@ -226,7 +225,7 @@ abstract class Controller {
 	 */
 	public function __call($method, $parameters)
 	{
-		throw new \BadMethodCallException("Method [$method] does not exist.");
+		return $this->missingMethod($method, $parameters);
 	}
 
 }

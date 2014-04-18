@@ -16,7 +16,7 @@ class CreateAdvertTable extends Migration {
 			$table->increments('id');
             $table->integer('car_id')->references('id')->on('cars_all')->default(0);
 			$table->integer('customer_id')->references('id')->on('users')->default(0);
-			$table->string('number_plate', 7);
+			$table->string('number_plate', 7)->default('');
             $table->string('make', 20);
             $table->string('model', 50);
 			$table->string('title', 60);

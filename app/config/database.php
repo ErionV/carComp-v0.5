@@ -1,6 +1,7 @@
 <?php
 
 return [
+
 	'fetch' => PDO::FETCH_CLASS,
 
 

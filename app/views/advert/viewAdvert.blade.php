@@ -50,7 +50,7 @@
     </div><!--End row-->
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-9">
             <div class="well descriptionWell">
                 <h4>Description:</h4>
                 <p>
@@ -58,6 +58,14 @@
                 </p>
             </div>
         </div><!--End col-md-4-->
+        <div class="col-md-3">
+            <div class="well descriptionWell">
+                <h4>Dealer Info:</h4>
+                <p>
+                    ekjvbeihbvekjv iejbvie viebv er ivb
+                </p>
+            </div>
+        </div>
     </div><!--End row-->
 @stop
 

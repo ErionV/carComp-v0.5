@@ -1,4 +1,20 @@
-{{ Form::open(['route' => 'post_advert', 'method' => 'POST', 'files' => true, 'class'=>'form-signup']) }}
+<!--Shows all form validation errors if any-->
+@if($errors->has())
+<div id="notificationMessage" class="alert-info alert">
+    <h3 class="glyphicon glyphicon-pencil"></h3>
+    <strong>PLEASE CHECK FORM INPUT</strong>
+    <ol>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ol>
+
+</div>
+@endif
+
+
+<!--This is the form for uploading a new advert-->
+{{ Form::open(['route' => 'post_postad', 'method' => 'POST', 'files' => true, 'class'=>'form-signup']) }}
     <div class="row">
         <div class="col-md-9">
             <div class="panel productNameAndPrice">
@@ -7,10 +23,9 @@
                         {{ Form::text('title', null, ['class'=>'form-control', 'placeholder'=>'Title']) }}
                         <span></span>
                     </h3>
-                    {{ $errors->first('title') }}
                 </div>
-            </div><!--End productNameAndPrice-->
-        </div><!--End col-md-9-->
+            </div>
+        </div>
 
         <div class="col-md-3">
             <div class="panel productNameAndPrice">
@@ -18,11 +33,10 @@
                     <h3 class="text-center">
                         {{ Form::text('price', null, ['class'=>'form-control', 'placeholder'=>'Price']) }}
                     </h3>
-                    {{ $errors->first('price') }}
                 </div>
-            </div><!--End productNameAndPrice-->
-        </div><!--End col-md-3-->
-    </div><!--End row-->
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-6">
@@ -34,7 +48,7 @@
                 <p>Created: </p>
                 <p>Last Updated: </p>
             </div>
-        </div><!--End col-md-2-->
+        </div>
         <div class="col-md-3">
             <div class="row">
                 <div class="col-md-12">
@@ -48,11 +62,11 @@
                             <li class="list-group-item"><strong>Mileage :</strong> {{ Form::text('mileage', null, ['class'=>'form-control', 'placeholder'=>'Mileage']) }}</li>
                             <li class="list-group-item"><strong>Fuel Type :</strong>  {{ Form::text('fuel_type', null, ['class'=>'form-control', 'placeholder'=>'Fuel type']) }}</li>
                         </ul>
-                    </div><!--End panel-->
-                </div><!--End col-md-6-->
-            </div><!--End row-->
-        </div><!--End col-md-5-->
-    </div><!--End row-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-9">
@@ -62,14 +76,21 @@
                     {{ Form::textarea('description', null, ['class'=>'form-control', 'placeholder'=>'Vehicle description']) }}
                 </p>
             </div>
-        </div><!--End col-md-4-->
-    </div><!--End row-->
+        </div>
+<!--        <div class="col-md-3">-->
+<!--            <div class="well descriptionWell">-->
+<!--                <h4>Description:</h4>-->
+<!--                <p>-->
+<!--                    {{ Form::textarea('description', null, ['class'=>'form-control', 'placeholder'=>'Vehicle description']) }}-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
 
     <div class="row">
         <div class="col-md-12">
-            {{ Form::submit('Post Ad !',['class' => 'btn btn-primary pull-right']); }}
+            {{ Form::submit('Post Ad!',['class' => 'btn btn-primary pull-right']); }}
         </div>
     </div>
-
 
 {{Form::close()}}

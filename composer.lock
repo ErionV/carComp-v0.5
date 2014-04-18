@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d951434b75ccd26f1884b4e5a8ec4939",
+    "hash": "60e26722033eb930dc9db253f5346375",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -138,52 +138,6 @@
             "time": "2013-12-04 14:19:30"
         },
         {
-            "name": "fzaninotto/faker",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "1d143fd8caf4d264602450bc01d7484af788706b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1d143fd8caf4d264602450bc01d7484af788706b",
-                "reference": "1d143fd8caf4d264602450bc01d7484af788706b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Faker": "src/",
-                    "Faker\\PHPUnit": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "time": "2013-12-16 21:56:48"
-        },
-        {
             "name": "ircmaxell/password-compat",
             "version": "1.0.x-dev",
             "source": {
@@ -276,12 +230,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3b30883aa8ac37e563cbe77e07d490fa36e3c9cb"
+                "reference": "301a6a5293f15c8c17f5278ed6197f3cbaccadd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3b30883aa8ac37e563cbe77e07d490fa36e3c9cb",
-                "reference": "3b30883aa8ac37e563cbe77e07d490fa36e3c9cb",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/301a6a5293f15c8c17f5278ed6197f3cbaccadd4",
+                "reference": "301a6a5293f15c8c17f5278ed6197f3cbaccadd4",
                 "shasum": ""
             },
             "require": {
@@ -384,7 +338,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2014-04-17 16:30:31"
+            "time": "2014-04-17 17:16:42"
         },
         {
             "name": "monolog/monolog",
@@ -1755,8 +1709,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "way/generators": 20,
-        "fzaninotto/faker": 20
+        "way/generators": 20
     },
     "platform": [
 

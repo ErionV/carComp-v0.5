@@ -5,7 +5,7 @@ class AdvertController extends BaseController
     /*
     * Return post advert View (GET)
     */
-    public function getPostAdvertGet()
+    public function getPostAdvert()
     {
         return  View::make('advert.postAdvert');
     }
@@ -13,7 +13,7 @@ class AdvertController extends BaseController
     /*
      * Handle the POST request with user input
      */
-    public function postAdvert()
+    public function postPostAdvert()
     {
         //Validate input
         $validator = Validator::make(Input::all(), Advert::$rulesCreateAdvertForm);
@@ -21,7 +21,7 @@ class AdvertController extends BaseController
         //Check if validation successful
         if($validator->fails())
         {
-            return  Redirect::route('advert_postad_get')
+            return  Redirect::route('get_postad')
                     ->withErrors($validator)
                     ->withInput();
         }
@@ -30,7 +30,7 @@ class AdvertController extends BaseController
             //Create new advert
             $advert = new Advert;
             $advert->customer_id    = Auth::user()->id;
-          //  $advert->number_plate   = strtoupper(Input::get('number_plate'));
+            //$advert->number_plate   = strtoupper(Input::get('number_plate'));
             $advert->title          = Input::get('title');
             $advert->price          = Input::get('price');
             $advert->make           = Input::get('make');
@@ -48,7 +48,7 @@ class AdvertController extends BaseController
                 //Get image
                 $file               = Input::file('image');
 
-                //Genarate new name
+                //Generate new name
                 $name               = time() . '-' . str_random(10) . '.jpeg';
 
                 //Move the image to image folder with in public directory

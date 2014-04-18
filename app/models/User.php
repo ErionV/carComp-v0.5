@@ -9,9 +9,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'email',
         'username',
         'password',
-        'password_temp',
-        'code',
-        'active'
     );
 
 
@@ -32,6 +29,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->password;
 	}
 
+
 	public function getReminderEmail()
 	{
 		return $this->email;
@@ -51,5 +49,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return 'remember_token';
     }
-
 }

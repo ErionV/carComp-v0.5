@@ -46,8 +46,8 @@ Route::group(['before' => 'auth'], function()
          * Post advert (POST)
          */
         Route::post('/postad/', [
-            'as'    => 'post_advert',
-            'uses'  => 'AdvertController@postAdvert'
+            'as'    => 'post_postad',
+            'uses'  => 'AdvertController@postPostAdvert'
         ]);
     });
 
@@ -71,8 +71,8 @@ Route::group(['before' => 'auth'], function()
     * Post new add (GET)
     */
     Route::get('/postad/', [
-        'as'    => 'advert_postad_get',
-        'uses'  => 'AdvertController@getPostAdvertGet'
+        'as'    => 'get_postad',
+        'uses'  => 'AdvertController@getPostAdvert'
     ]);
 });
 

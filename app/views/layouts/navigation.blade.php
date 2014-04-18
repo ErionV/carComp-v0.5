@@ -23,7 +23,7 @@
                 <p class="username_nav">{{ HTML::link('user/'.Auth::user()->username, Auth::user()->username, ['class' => '']) }}</p>
 
                 <div id="popover-content" style="display: none">
-                    <p class="login_nav">{{ HTML::link(URL::route('post_advert') , 'Post Ad', ['class' => '']) }}</p>
+                    <p class="login_nav">{{ HTML::link(URL::route('get_postad') , 'Post Ad', ['class' => '']) }}</p>
                     <p class="login_nav">{{ HTML::link(URL::route('account_change_password') , 'Change Password', ['class' => '']) }}</p>
                     <p class="login_nav">{{ HTML::link(URL::route('account_logout'), 'Logout', ['class' => '']) }}</p>
                 </div>
